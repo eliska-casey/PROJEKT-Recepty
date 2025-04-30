@@ -5,6 +5,9 @@ html { box-sizing: border-box; }
 body {
 	margin: 0;
 	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	color: white;
 }
 
 .paticka {
@@ -33,3 +36,120 @@ Nastav je receptům jako obrázky na pozadí (tj. nepřidávej je jako <img> do 
 Na rozložení prvků NEPOUŽÍVEJ absolutní pozicování, ale pouze flexboxy.
 Flexboxy mohou být vnořené do sebe, klidně několikrát.
 */
+h1 {
+	font-family: "Raleway", sans-serif;
+	font-weight: 800;
+	font-size: 28px;
+	margin: 0;
+}
+
+p {
+	margin: 0;
+}
+
+
+.recept {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 10px;
+	border: 1px solid white;
+	
+}
+
+.horni-cast {
+	display: flex;
+	justify-content: space-between;
+}
+.hlavni {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(images/salat.jpg);
+	background-size: cover;
+	min-height: 200px;
+	
+}
+
+.maly {
+	min-height: 90px;
+}
+
+.maly h1 {
+	font-size: 18px;
+}
+
+.maly1 {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(images/chlebicek.jpg);
+	background-size: cover;
+}
+
+.maly2 {
+	background-image:linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(images/tacos.jpg);
+	background-size: cover;
+}
+
+.maly3 {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(images/cizrna.jpg);
+	background-size: cover;
+}
+
+.maly4 {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(images/burger.jpg);
+	background-size: cover;
+}
+
+@media screen and (min-width: 480px) {
+	.recepty {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.hlavni {
+		flex-basis: 100%;
+		min-height: 250px;
+	}
+
+	.maly {
+		min-height: 150px;
+	}
+
+	.male-recepty {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.recept {
+		flex-basis: 50%;
+		min-height: 150px;
+		padding: 20px;
+	}
+
+	.hlavni h1 {
+		font-size: 36px;
+	}
+
+	.maly h1 {
+		font-size: 22px;
+	}
+}
+
+@media screen and (min-width: 860px) {
+	.recepty {
+		flex-direction: row;
+	}
+
+	.hlavni h1 {
+		font-size: 48px;
+	}
+
+	.maly h1 {
+		font-size: 28px;
+	}
+	
+	.hlavni {
+		min-height: 400px;
+		min-width: calc(100% / 3);
+	}
+
+	.maly {
+		min-height: 200px;
+	}
+}
